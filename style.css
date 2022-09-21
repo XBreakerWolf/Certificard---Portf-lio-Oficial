@@ -1,0 +1,131 @@
+/* o design dessa página foi feito baseando-se no site "Figma" */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+Body {
+  background: linear-gradient(236.85deg, #041832 27.26%, #3468a7 96.3%);
+  font-family: "Roboto", sans-serif;
+  /*  Essa fonte foi copiada do site google fonts (link: fonts.google.com). É necessário copiar os códigos do import (inicio do CSS) e o código do tipo da fonte. */
+}
+
+.container {
+  /*  Com um ponto(.) antes da palavra, estou invocando a classe presente no HTML para estilizá-la */
+
+  background: #ecf4ff;
+  /*  É necessário pegar o código das cores no site para evitar erros e controvérsias  */
+  color: #1c1c1c;
+  /*  cor da fonte  */
+  margin: 64px;
+  /*   foi criada uma margem (do elemento em questão para os elementos externos a ele) com 64 pixels de distância */
+  border-radius: 20px;
+  /*  curvatura da borda do elemento a ser estilizado  */
+  box-shadow: 6px 6px 6px #0e1d2f;
+  /*  sombra do elemento a ser estilizado  */
+  padding: 64px;
+  /*   foi criada uma margem (dos itens internos ao elemento em questão) com 64 pixels de distância */
+}
+
+.cabecalho {
+  display: flex;
+  /*   Com isso, utilizamos o flex box, um comando muito útil para o alinhamento de determinado texto. Você pode encontrar artigos sobre este e demais assuntos no site da alura   */
+  justify-content: space-between;
+  /*  justifica os elementos que estão dentro do cabeçalho de modo que haja um espaço entre o perfil e o botão de alterar o tema
+}
+
+.perfil {
+  display: flex;
+  /*   Com isso, utilizamos o flex box, um comando muito útil para o alinhamento de determinado texto. Você pode encontrar artigos sobre este e demais assuntos no site da alura   */
+}
+
+.perfil-foto {
+  border-radius: 50px;
+  /*  Lembrando que a medida dos pixels e demais informações devem ser verificadas no site de origem do design  */
+  max-height: 160px;
+  /*  tamanho máximo ocupado pela foto  */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.titulo {
+  margin-left: 16px;
+  /*   separação de uma distância de 16 pixels com relação à foto (margem criada na esquerda/left do elemento em questão)   */
+}
+
+.titulo h1 {
+  /*  estou estilizando a tag h1 que está dentro do elemento de classe titulo (é semelhante ao array do JavaScript, quando quero tirar algum elemento, porém ao invés de efetuarmos tal ação com um ponto, fazemos com um espaço)  */
+  font-weight: 700;
+  /*  peso da fonte: 700. Lembrando que essa medida foi extraída do Google Fonts e está de acordo com o site Figma, tendo sido importada do Google Fonts no inicio do código CSS  */
+  font-size: 36px;
+  /*  tamanho da fonte (extraído do Figma)  */
+}
+
+.titulo h3 {
+  /*  estou estilizando a tag h3 que está dentro do elemento de classe titulo (é semelhante ao array do JavaScript, quando quero tirar algum elemento, porém ao invés de efetuarmos tal ação com um ponto, fazemos com um espaço)  */
+  font-weight: 400;
+  /*  peso da fonte: 400. Lembrando que essa medida foi extraída do Google Fonts e está de acordo com o site Figma, tendo sido importada do Google Fonts no inicio do código CSS  */
+  font-size: 24px;
+  /*  tamanho da fonte (extraído do Figma) */
+}
+
+.tema button {
+  align-self: flex-end;
+  /*   alinhar o elemento sozinho (ele mesmo)   */
+  font-size: 24px;
+  font-weight: 400;
+  padding: 8px 16px;
+  /*   Há duas informações nesse padding: 8 pixels de distância na perspectiva de cima para baixo e 16 pixels de distância na perspectiva da esquerda para a direita.
+  Semelhante à ordem das coordenadas de um plano cartesiano, as medidas do padding sempre seguem essa ordem  */
+  background: #ecf4ff;
+  border-radius: 100px;
+}
+
+.projetos {
+  display: flex;
+  flex-direction: column;
+  /*  direção, modo como o "flex" foi organizado  */
+  background: linear-gradient(230.65deg, #499cfe 27.49%, #9cc8fc 83.19%);
+  margin-top: 32px;
+  padding: 32px;
+  border-radius: 48px;
+}
+
+.projetos-titulo {
+  list-style: none;
+  /*  estilo da lista (decoração padrão): nenhum (removido o padrão)  */
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.projetos-item {
+  /*   list-style-type: none; */
+  /*  seria para remover a estilização de cada item, no caso, aquelas bolinhas que demarcam cada termo; entretanto eu, particularmente, achei interessante  */
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.projetos-item a {
+  color: #1c1c1c;
+  text-decoration: none;
+  /*  removido o efeito de "sublinhado" do texto */
+}
+
+.dark {
+  background: linear-gradient(236.85deg, #375b86 27.26%, #6b87a9 96.03%);
+}
+
+.dark .container {
+  /*  para todo elemento dentro do container que está dentro da "class" dark...  */
+  background: #333439;
+  color: #f6f6f6;
+}
+
+.dark .projetos {
+  color: #1c1c1c;
+}
+
+.dark .tema button {
+  background: #1c1c1c;
+  color: #ffffff;
+  border: 2px solid #f7f7f7;
+  /*  border = tamanho da borda(2px), versão sólida, cor(#f7f7f7) */
+}
